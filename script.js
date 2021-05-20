@@ -4,6 +4,10 @@ var tripiowalat = [] ;
 var tripiowalong = [] ;
 var trip2iowalat = [] ;
 var trip2iowalong = [] ;
+var trip3iowalat = [] ;
+var trip3iowalong = [] ;
+var trip4iowalat = [] ;
+var trip4iowalong = [] ;
 let fakearray = [] ;
 var imagetotal = 20;
 var start = 0;
@@ -13,6 +17,8 @@ var directions ;
 var triplength = 800;
 var p5imgs = [];
 var p5imgs1 = [];
+var p5imgs2 = [];
+var p5imgs3 = [];
 
 var vScale = 1;
 
@@ -34,7 +40,7 @@ var wheelcounter = 0;
 
 
 async function catchData(){
-    var response = await fetch('/directions1.geojson'); 
+    var response = await fetch('roadtrip/directions1.geojson'); 
     const json = await response.json();
     console.log(json)
     var i;
@@ -49,7 +55,7 @@ async function catchData(){
 
 
 async function catchData2(){
-        var response2 = await fetch('/directions2.geojson'); 
+        var response2 = await fetch('/roadtrip/directions1.geojson'); 
         const json2 = await response2.json();
         console.log(json2 + "json2")
         var i;
@@ -61,6 +67,34 @@ async function catchData2(){
         async function insertpictures2(){
         await catchData2();}
         insertpictures2();
+
+async function catchData3(){
+          var response3 = await fetch('/directions3.geojson'); 
+          const json3 = await response3.json();
+          console.log(json3 + "json3")
+          var i;
+          for (i = 0; i < imagetotal; i++) {
+              trip3iowalat[i] = json3.features[0].geometry.coordinates[triplength+i][0]  
+              trip3iowalong[i] = json3.features[0].geometry.coordinates[triplength+i][1] 
+               }  
+                  }
+          async function insertpictures3(){
+          await catchData3();}
+          insertpictures3();
+
+async function catchData4(){
+            var response4 = await fetch('/directions4.geojson'); 
+            const json4 = await response4.json();
+            console.log(json4 + "json4")
+            var i;
+            for (i = 0; i < imagetotal; i++) {
+                trip4iowalat[i] = json4.features[0].geometry.coordinates[triplength+i][0]  
+                trip4iowalong[i] = json4.features[0].geometry.coordinates[triplength+i][1] 
+                 }  
+                    }
+            async function insertpictures4(){
+            await catchData4();}
+            insertpictures4();
 
     
     
@@ -145,6 +179,7 @@ $( document ).ready(function() {
         $("#opt33").hide()
         $("#opt4").hide()
         $("#opt44").hide()
+        imgarray = p5imgs2
 
       });
 
@@ -159,6 +194,7 @@ $( document ).ready(function() {
         $("#opt33").hide()
         $("#opt4").hide()
         $("#opt44").hide()
+        imgarray = p5imgs2
 
       });
 
@@ -173,6 +209,7 @@ $( document ).ready(function() {
         $("#opt33").hide()
         $("#opt4").hide()
         $("#opt44").hide()
+        imgarray = p5imgs3
 
       });
 
@@ -187,23 +224,10 @@ $( document ).ready(function() {
         $("#opt33").hide()
         $("#opt4").hide()
         $("#opt44").hide()
+        imgarray = p5imgs3
 
       });
 
-
-      $( "#opt44").click(function() {
-        console.log("clicked");
-        $(".p5").css("display", "block");
-        $("#opt1").hide()
-        $("#opt11").hide()
-        $("#opt2").hide()
-        $("#opt22").hide()
-        $("#opt3").hide()
-        $("#opt33").hide()
-        $("#opt4").hide()
-        $("#opt44").hide()
-
-      });
 
 
       $( "#resetme").click(function() {
@@ -281,6 +305,16 @@ async function preload() {
         p5imgs1[i] = loadImage("https://maps.googleapis.com/maps/api/streetview?size=600x300&location=" + trip2iowalong[i] + "," + trip2iowalat[i] + "&fov=120&heading=270&pitch=-0.76&key=AIzaSyCOAbJWj12DA0dyyqNFbaewyAQUuUaoL08")
 
     }
+
+    for (i = 0; i < imagetotal; i++) {
+      p5imgs2[i] = loadImage("https://maps.googleapis.com/maps/api/streetview?size=600x300&location=" + trip3iowalong[i] + "," + trip3iowalat[i] + "&fov=120&heading=270&pitch=-0.76&key=AIzaSyCOAbJWj12DA0dyyqNFbaewyAQUuUaoL08")
+
+  }
+
+  for (i = 0; i < imagetotal; i++) {
+    p5imgs3[i] = loadImage("https://maps.googleapis.com/maps/api/streetview?size=600x300&location=" + trip4iowalong[i] + "," + trip4iowalat[i] + "&fov=120&heading=270&pitch=-0.76&key=AIzaSyCOAbJWj12DA0dyyqNFbaewyAQUuUaoL08")
+
+}
 
      }
 
@@ -386,14 +420,6 @@ function draw(){
     if (frameCount % 60 == 0){
         speedcounter = 0
         }
-
-        
-
-    
-
-    
-
-    
-
     
 }
+
