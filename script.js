@@ -9,7 +9,7 @@ var trip3iowalong = [] ;
 var trip4iowalat = [] ;
 var trip4iowalong = [] ;
 let fakearray = [] ;
-var imagetotal = 30;
+var imagetotal = 25;
 var start = 0;
 var directions ;
 
@@ -250,6 +250,8 @@ $( document ).ready(function() {
 
       $( "#download").click(function() {
         saveCanvas('myCanvas', 'jpg');
+        
+        
 
       });
 
