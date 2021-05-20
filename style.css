@@ -1,0 +1,410 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+body{
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.container{
+    height: 500vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: scroll;
+}
+
+@keyframes move{
+0% {left:0%}
+100%{left:100%}
+
+}
+
+.trip1{
+  width: 15%;
+  height: 10%;
+  max-width: 200px; 
+  max-height: 100px ;
+  background-color: red;
+  z-index: 5;
+  position: fixed;
+  top: 10%;
+  animation-name:move;
+  animation-duration: 70s;
+  animation-timing-function: linear;
+
+}
+
+.trip1 img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.trip2 img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.trip11 img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.trip22 img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.trip33 img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.trip44 img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.trip3 img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.trip4 img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.trip222 img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.trip2{
+  width: 15%;
+  height: 10%;
+  max-width: 200px; 
+  max-height: 100px ;
+  background-color: rgb(25, 0, 255);
+  z-index: 5;
+  position: fixed;
+  top: 30%
+}
+
+/* .trip222{
+  width: 15%;
+  height: 10%;
+  max-width: 200px; 
+  max-height: 100px ;
+  background-color: rgb(25, 0, 255);
+  z-index: 5;
+  position: fixed;
+  top: 30%;
+  animation-name:move4;
+  animation-duration: 70s;
+  animation-timing-function: linear;
+}
+
+.trip2222{
+  width: 15%;
+  height: 10%;
+  max-width: 200px; 
+  max-height: 100px ;
+  background-color: rgb(25, 0, 255);
+  z-index: 5;
+  position: fixed;
+  top: 30%;
+  display:none;
+} */
+
+.trip3{
+  width: 15%;
+  height: 10%; 
+  max-width: 200px; 
+  max-height: 100px ;
+  background-color: rgb(200, 255, 0);
+  z-index: 5;
+  position: fixed;
+  top: 50%
+}
+
+.trip4{
+  width: 15%;
+  height: 10%;
+  max-width: 200px; 
+  max-height: 100px; 
+  background-color: rgb(55, 0, 255);
+  z-index: 5;
+  position: fixed;
+  top: 70%
+}
+
+.frames{
+    height: 300px;
+    width: 600px; 
+    background-color: black;
+    margin: 2%;
+    position:fixed;
+    top:15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.frames2{
+
+    height: 300px;
+    width: 600px; 
+    background-color: black;
+    margin: 2%;
+    position:fixed;
+    top:50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+}
+
+.frames img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+
+}
+
+.show{
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 50;
+    z-index: 2;
+}
+
+body::-webkit-scrollbar {
+    width: 1em;
+    background-color: black;
+  }
+
+  body::-webkit-scrollbar-track {
+    width: 1em;
+    background-color: rgb(87, 87, 87);
+   
+  }
+
+
+  body::-webkit-scrollbar-corner {
+    background-color: black;
+  }
+
+  body::-webkit-scrollbar-thumb{
+    width: 1em;
+    background-color:rgb(211, 211, 211);
+
+  }
+
+  @keyframes move1{
+    0% {left:0%}
+    100%{left:105%}
+    
+    }
+    
+    @keyframes move2{
+      0% {left:20%}
+      100%{left:120%}
+      }
+    
+    @keyframes move3{
+        0% {left:50%}
+        100%{left:150%}
+        }
+    
+    @keyframes move4{
+          0% {left:80%}
+          100%{left:180%}
+          }
+  
+    
+    @keyframes move0{
+            0% {left:0%}
+            100%{left:105%}
+            }
+    
+    
+    
+    .trip1{
+      width: 15%;
+      height: 10%;
+      max-width: 200px; 
+      max-height: 100px ;
+      background-color: red;
+      z-index: 5;
+      position: fixed;
+      top: 10%;
+      animation-name:move1;
+      animation-duration: 70s;
+      animation-timing-function: linear;
+    
+    }
+    
+    .trip11{
+      display:none;
+      width: 15%;
+      height: 10%;
+      max-width: 200px; 
+      max-height: 100px ;
+      background-color: red;
+      z-index: 5;
+      position: fixed;
+      top: 10%;
+    
+    }
+    
+    .trip2{
+      width: 15%;
+      height: 10%;
+      max-width: 200px; 
+      max-height: 100px ;
+      background-color: rgb(25, 0, 255);
+      z-index: 5;
+      position: fixed;
+      top: 30%;
+      animation-name:move3;
+      animation-duration: 70s;
+      animation-timing-function: linear;
+    }
+    
+    .trip0{
+      animation-name:move0;
+      animation-duration: 70s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+    
+    .trip22{
+      display: none;
+      width: 15%;
+      height: 10%;
+      max-width: 200px; 
+      max-height: 100px ;
+      background-color: rgb(25, 0, 255);
+      z-index: 5;
+      position: fixed;
+      top: 30%;
+      
+    }
+    
+    .trip3{
+      width: 15%;
+      height: 10%; 
+      max-width: 200px; 
+      max-height: 100px ;
+      background-color: rgb(200, 255, 0);
+      z-index: 5;
+      position: fixed;
+      top: 50%;
+      animation-name:move2;
+      animation-duration: 70s;
+      animation-timing-function: linear;
+    }
+    
+    .trip33{
+      display:none;
+      width: 15%;
+      height: 10%; 
+      max-width: 200px; 
+      max-height: 100px ;
+      background-color: rgb(200, 255, 0);
+      z-index: 5;
+      position: fixed;
+      top: 50%;
+    }
+    
+    .trip4{
+      width: 15%;
+      height: 10%;
+      max-width: 200px; 
+      max-height: 100px; 
+      background-color: rgb(55, 0, 255);
+      z-index: 5;
+      position: fixed;
+      top: 70%;
+      animation-name:move4;
+      animation-duration: 70s;
+      animation-timing-function: linear;
+    }
+    
+    .trip44 {
+    
+      display:none;
+      width: 15%;
+      height: 10%;
+      max-width: 200px; 
+      max-height: 100px; 
+      background-color: rgb(55, 0, 255);
+      z-index: 5;
+      position: fixed;
+      top: 70%;
+    
+    }
+
+.show {
+  display: none;
+}
+
+.p5{
+  animation-name: infader;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  display: none;
+}
+
+@keyframes infader{
+  0% {opacity:0%;}
+  100% {opacity:100%;}
+}
+
+.reset{
+  position: fixed;
+  width: 10%;
+  height: 5%;
+  top:0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about{
+  
+  position: fixed;
+  width: 10%;
+  height: 5%;
+  top:0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.abouttextcontainer{
+  height: 50%;
+  width: 90%;
+  text-align: center;
+  color: rgb(143, 143, 143);
+  font-size: 1.2em;
+  font-family: 'Space Mono', monospace;
+}
