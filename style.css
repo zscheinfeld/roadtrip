@@ -376,7 +376,7 @@ body::-webkit-scrollbar {
   100% {opacity:100%;}
 }
 
-.reset{
+.home{
   position: fixed;
   width: 10%;
   height: 5%;
@@ -387,7 +387,7 @@ body::-webkit-scrollbar {
   justify-content: center;
 }
 
-.about{
+.home{
   
   position: fixed;
   width: 10%;
@@ -405,6 +405,32 @@ body::-webkit-scrollbar {
   width: 90%;
   text-align: center;
   color: rgb(143, 143, 143);
-  font-size: 1.2em;
+  font-size: 1em;
   font-family: 'Space Mono', monospace;
 }
+
+.erase{
+  
+  position: fixed;
+  width: 10%;
+  height: 5%;
+  bottom:0;
+  top: 94%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.download{
+  
+  position: fixed;
+  width: 10%;
+  height: 5%;
+  right: 1%;
+  top: 94%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+

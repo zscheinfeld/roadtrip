@@ -9,7 +9,7 @@ var trip3iowalong = [] ;
 var trip4iowalat = [] ;
 var trip4iowalong = [] ;
 let fakearray = [] ;
-var imagetotal = 20;
+var imagetotal = 2;
 var start = 0;
 var directions ;
 
@@ -238,6 +238,18 @@ $( document ).ready(function() {
         $("#opt3").show()
         $("#opt4").show()
 
+
+      });
+
+      $( "#resetmemore").click(function() {
+        
+        background(0);
+        wheelcounter = 0
+
+      });
+
+      $( "#download").click(function() {
+        saveCanvas('myCanvas', 'jpg');
 
       });
 
