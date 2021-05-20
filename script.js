@@ -40,7 +40,7 @@ var wheelcounter = 0;
 
 
 async function catchData(){
-    var response = await fetch('roadtrip/directions1.geojson'); 
+    var response = await fetch('/roadtrip/directions1.geojson'); 
     const json = await response.json();
     console.log(json)
     var i;
@@ -69,7 +69,7 @@ async function catchData2(){
         insertpictures2();
 
 async function catchData3(){
-          var response3 = await fetch('/directions3.geojson'); 
+          var response3 = await fetch('/roadtrip/directions3.geojson'); 
           const json3 = await response3.json();
           console.log(json3 + "json3")
           var i;
@@ -83,7 +83,7 @@ async function catchData3(){
           insertpictures3();
 
 async function catchData4(){
-            var response4 = await fetch('/directions4.geojson'); 
+            var response4 = await fetch('/roadtrip/directions4.geojson'); 
             const json4 = await response4.json();
             console.log(json4 + "json4")
             var i;
