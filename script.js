@@ -9,7 +9,7 @@ var trip3iowalong = [] ;
 var trip4iowalat = [] ;
 var trip4iowalong = [] ;
 let fakearray = [] ;
-var imagetotal = 5;
+var imagetotal = 50;
 var start = 0;
 var directions ;
 
